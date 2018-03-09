@@ -1,0 +1,43 @@
+<zk>
+	<window id="win" title="Customer Search" width="1000px" border="normal"
+			apply="com.example.research.controller.SearchController">
+		<hbox align="center">
+			Keyword:
+			<textbox id="keywordBox"/>
+			<button id="searchButton" label="Search"/>
+		</hbox>
+		<listbox id="customersListbox" emptyMessage="No customer found in the result" height="160px" style="margin-top:10px">
+			<listhead>
+				<listheader label="UUID"/>
+				<listheader label="First Name"/>
+				<listheader label="Surname"/>
+				<listheader label="Age"/>
+			</listhead>
+			<template name="model">
+				<listitem>
+					<listcell label="${each.customerId}"></listcell>
+					<listcell label="${each.firstname}"></listcell>
+					<listcell label="${each.surname}"></listcell>
+					<listcell label="${each.age}"></listcell>
+				</listitem>
+			</template>
+		</listbox>
+		<hbox style="margin-top:20px" id="detailBox" visible="false">
+			<vbox>
+				<hlayout>
+					UUID : <label id="uuidLabel" style="font-weight:bold"/>
+				</hlayout>
+				<hlayout>
+					First Name : <label id="firstnameLabel" style="font-weight:bold"/>
+				</hlayout>
+				<hlayout>
+					Surname : <label id="surnameLabel" style="font-weight:bold"/>
+				</hlayout>
+				<hlayout>
+					Age : <label id="ageLabel" style="font-weight:bold"/>
+				</hlayout>
+			</vbox>
+		</hbox>
+
+	</window>
+</zk>

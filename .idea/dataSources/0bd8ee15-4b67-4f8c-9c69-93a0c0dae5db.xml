@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="accounts@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="accounts">
+      <ObjectId>49154</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12407</ObjectId>
+    </database>
+    <database id="4" parent="1" name="exercises">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="5" parent="1" name="dvdrental">
+      <ObjectId>16438</ObjectId>
+    </database>
+    <database id="6" parent="1" name="first_jooq">
+      <ObjectId>32770</ObjectId>
+    </database>
+    <role id="7" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="9" parent="1" name="root">
+      <ObjectId>16384</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <schema id="10" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-03-06.16:48:08.392</IntrospectionTimestamp>
+      <IntrospectionStateNumber>855</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="11" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="information_schema">
+      <ObjectId>12119</ObjectId>
+    </schema>
+    <table id="16" parent="10" name="customers">
+      <ObjectId>49163</ObjectId>
+      <StateNumber>855</StateNumber>
+    </table>
+    <column id="17" parent="16" name="customer_id">
+      <Position>1</Position>
+      <DataType>uuid|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>855</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="18" parent="16" name="firstname">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>855</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="19" parent="16" name="surname">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>855</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="20" parent="16" name="age">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>855</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="21" parent="16" name="customers_pkey">
+      <ObjectId>49169</ObjectId>
+      <ColNames>customer_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="16" name="customers_pkey">
+      <ObjectId>49170</ObjectId>
+      <ColNames>customer_id</ColNames>
+      <UnderlyingIndexName>customers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
